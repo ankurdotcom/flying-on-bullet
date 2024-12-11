@@ -1,0 +1,18 @@
+{
+  "name": "flying-on-bullet",
+  "version": "1.0.0",
+  "description": "Its CVS project targeted for 2 wheelers",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm start",
+    "run-mqtt": "--prefix ./src node mqtt.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mqtt": "^5.10.3"
+  }
+}
