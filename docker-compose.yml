@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  app:
+    build:
+      context: . 
+    container_name: fleet-backend
+    ports:
+      - "4000:4000" # Map the container's port 4000 to the host's port 4000
+    environment:
+      MONGO_URI: mongodb://mongo:27017/fleet-db
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:6.0
+    container_name: fleet-mongo
+    ports:
+      - "27017:27017" # Map the container's MongoDB port
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
